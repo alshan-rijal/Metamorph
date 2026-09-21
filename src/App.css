@@ -283,12 +283,12 @@ body:has(.app:not(.dark)) { background:#F5F5F7; }
 /* Auth split card and profile surfaces. */
 .modal-backdrop { background:rgba(29,29,31,.42); padding:24px; }
 .auth-modal { width:min(920px,100%); max-width:none; min-height:560px; display:grid; grid-template-columns:1fr 1fr; gap:0; padding:0; overflow:hidden; border:0; border-radius:30px; background:var(--surface); box-shadow:0 28px 80px rgba(29,29,31,.2); }
-.auth-modal::before { content:'Welcome Back!\A Already have an account?\A\A Login'; white-space:pre; grid-column:2; grid-row:1; order:2; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:40px; background:#007AFF; color:#fff; font-size:16px; line-height:2.3; font-weight:600; border-radius:0 30px 30px 0; }
+.auth-modal::before { display:none; }
 .auth-modal > * { grid-column:1; position:relative; z-index:1; }
 .auth-modal .modal-close { grid-column:1; justify-self:end; z-index:2; margin:18px; }
-.auth-modal .auth-logo { margin:40px 0 0 46px; }
-.auth-modal .auth-kicker { margin-left:46px; }
-.auth-modal h2, .auth-modal > p, .auth-modal > .google-btn, .auth-modal > .or, .auth-modal > form, .auth-modal > small, .auth-modal > .auth-success { margin-left:46px; margin-right:46px; }
+.auth-modal .auth-logo { margin:0 0 28px; }
+.auth-modal .auth-kicker { margin-left:0; }
+.auth-modal h2, .auth-modal > p, .auth-modal > .google-btn, .auth-modal > .or, .auth-modal > form, .auth-modal > small, .auth-modal > .auth-success { margin-left:0; margin-right:0; }
 .auth-modal h2 { margin-top:26px; font-size:34px; }
 .auth-modal > p { margin-bottom:22px; }
 .auth-modal > form { margin-top:0; }
@@ -369,3 +369,8 @@ body:has(.app:not(.dark)) { background:#F5F5F7; }
 .password-error, .password-message { margin:0; font-size:10px; line-height:1.4; }
 .password-error { color:#b04b4b; }
 .password-message { color:var(--accent); }
+
+/* Keep both logo assets ready so manual theme changes swap without layout shift or a flash. */
+.logo-dark { display:none; }
+html[data-theme='dark'] .logo-light { display:none; }
+html[data-theme='dark'] .logo-dark { display:block; }
