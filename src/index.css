@@ -1,0 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap');
+:root { font-family: 'Inter', sans-serif; color: #1D1D1F; background: #F5F5F7; font-synthesis: none; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
+html[data-theme='dark'] { color:#F5F5F7; background:#1D1D1F; }
+* { box-sizing: border-box; } html { scroll-behavior: smooth; min-height:100%; } body { margin: 0; min-width: 320px; min-height:100vh; background:#F5F5F7; } html[data-theme='dark'] body { background:#1D1D1F; } button, input { font: inherit; } button, a { -webkit-tap-highlight-color: transparent; }
