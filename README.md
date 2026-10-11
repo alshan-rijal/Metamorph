@@ -8,7 +8,7 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./src/assets/logo-dark.png">
   <source media="(prefers-color-scheme: light)" srcset="./src/assets/logo-light.png">
-  <img src="./src/assets/logo-light.png" alt="Metamorph logo" width="96"/>
+  <img src="public/images/content/hero-home.png" alt="Metamorph logo" width="96"/>
 </picture>
 
 <br/><br/>
